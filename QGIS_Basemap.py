@@ -9,6 +9,9 @@ You can add or remove sources from the sources section of the code.
 
 Script by Klas Karlsson
 Sources from https://qms.nextgis.com/
+2021-02-04
+Script taken from:
+    https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
 
 Licence GPL-3
 
@@ -21,7 +24,7 @@ For Esri basemaps you will need a valid ArcGIS online subscription to use the ma
 """
 
 
-# Sources
+# Sources XYZ
 sources = []
 sources.append(["connections-xyz","Google Maps","","","","https://mt1.google.com/vt/lyrs=m&x=%7Bx%7D&y=%7By%7D&z=%7Bz%7D","","19","0"])
 sources.append(["connections-xyz","Google Satellite", "", "", "", "https://mt1.google.com/vt/lyrs=s&x=%7Bx%7D&y=%7By%7D&z=%7Bz%7D", "", "19", "0"])
@@ -56,7 +59,7 @@ sources.append(["connections-xyz","Open Weather Map Wind Speed", "", "", "Map ti
 sources.append(["connections-xyz","CartoDb Dark Matter", "", "", "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "http://basemaps.cartocdn.com/dark_all/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "20", "0"])
 sources.append(["connections-xyz","CartoDb Positron", "", "", "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "http://basemaps.cartocdn.com/light_all/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "20", "0"])
 sources.append(["connections-xyz","Bing VirtualEarth", "", "", "", "http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1", "", "19", "1"])
-
+sources.append(["connections-wms","Bing VirtualEarth", "", "", "", "http://services.data.shom.fr/INSPIRE/wms/r?version=1.3.0", "", "", ""])
 
 # Add sources to browser
 for source in sources:
