@@ -1,6 +1,0 @@
-<!DOCTYPE connections>
-<qgsWMSConnections version="1.0">
-    <wms referer="" name="Shom" url="http://services.data.shom.fr/INSPIRE/wms/r?version=1.3.0" invertAxisOrientation="false" ignoreAxisOrientation="false" username="" ignoreGetMapURI="false" password="" smoothPixmapTransform="false" dpiMode="7" ignoreGetFeatureInfoURI="false"/>
-    <wms referer="" name="sandre" url="https://services.sandre.eaufrance.fr/geo/sandre" invertAxisOrientation="false" ignoreAxisOrientation="false" username="" ignoreGetMapURI="false" password="" smoothPixmapTransform="false" dpiMode="7" ignoreGetFeatureInfoURI="false"/>
-    <wms referer="" name="wms.reseau-zones-humides.org" url="http://wms.reseau-zones-humides.org/cgi-bin/wmsfma?" invertAxisOrientation="false" ignoreAxisOrientation="false" username="" ignoreGetMapURI="false" password="" smoothPixmapTransform="false" dpiMode="7" ignoreGetFeatureInfoURI="false"/>
-</qgsWMSConnections>
