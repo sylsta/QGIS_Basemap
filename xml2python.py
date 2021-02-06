@@ -1,17 +1,20 @@
 from xml.dom import minidom
 
 if (__name__) == "__main__":
+    outputFile ="pycode4qgis.py"
     dataTypes = ["wms", "wfs", "xyz"]
-    print('sources=[]')
+    outputFileContent = []
+    outputFileContent.append('sources=[]')
+
     for dataType in dataTypes:
-        xmldoc = minidom.parse('QGIS_%s_original.xml' % (dataType.upper()))
+        xmldoc = minidom.parse('QGIS_%s.xml' % (dataType.upper()))
         if dataType == "xyz":
             itemList = xmldoc.getElementsByTagName(dataType+"tiles")
         else:
             itemList = xmldoc.getElementsByTagName(dataType)
-        resourceList = []
+        sourceList = []
 
-        sourcesAttributes = {
+        sourceAttributes = {
             "name": "ERROR",
             "url": "unknown url",
             "referer": "",
@@ -35,33 +38,33 @@ if (__name__) == "__main__":
         for item in itemList:
             itemsDetails = []
             itemsDetails.append('connections-%s' % dataType)
-            for key, value in sourcesAttributes.items():
+            for key, value in sourceAttributes.items():
 
                 try:
                     itemsDetails.append(item.attributes[key].value)
                 except:
                     itemsDetails.append(value)
-            resourceList.append(itemsDetails)
+            sourceList.append(itemsDetails)
 
-        for resource in resourceList:
+        for source in sourceList:
             # [sourcetype, title, authconfig, password, referer, url, username, zmax, zmin]
-            print('sources.append(["%s", "%s", "%s", "%s", "%s","%s", "%s", "%s", "%s"])' % (resource[0], resource[1],
-                                                                                             resource[6], resource[5],
-                                                                                             resource[3], resource[2],
-                                                                                             resource[4], resource[16],
-                                                                                             resource[17]))
-""""
-for source in sources:
-   connectionType = source[0]
-   connectionName = source[1]
-   QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
-   QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
-   QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
-   QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
-   QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
-   QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
-   QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+            outputFileContent.append('sources.append(["%s", "%s", "%s", "%s", "%s","%s", "%s", "%s", "%s"])' % (source[0], source[1],
+                                                                                             source[6], source[5],
+                                                                                             source[3], source[2],
+                                                                                             source[4], source[16],
+                                                                                             source[17]))
 
-# Update GUI
-iface.reloadConnections()
-"""
+    outputFileContent.append('for source in sources:')
+    outputFileContent.append('    connectionType = source[0]')
+    outputFileContent.append('    connectionName = source[1]')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])')
+    outputFileContent.append('    QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])')
+    outputFileContent.append(' ')
+    outputFileContent.append('iface.reloadConnections()')
+    with open(outputFile, 'w') as out_file:
+        out_file.write('\n'.join(outputFileContent) + '\n')
