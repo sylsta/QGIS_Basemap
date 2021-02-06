@@ -11,8 +11,8 @@ if (__name__) == "__main__":
             itemList = xmldoc.getElementsByTagName(dataType)
         resourceList = []
 
-        dictAttributs = {
-            "name": "unknown name",
+        sourcesAttributes = {
+            "name": "ERROR",
             "url": "unknown url",
             "referer": "",
             "username": "",
@@ -35,7 +35,7 @@ if (__name__) == "__main__":
         for item in itemList:
             itemsDetails = []
             itemsDetails.append('connections-%s' % dataType)
-            for key, value in dictAttributs.items():
+            for key, value in sourcesAttributes.items():
 
                 try:
                     itemsDetails.append(item.attributes[key].value)
@@ -50,3 +50,18 @@ if (__name__) == "__main__":
                                                                                              resource[3], resource[2],
                                                                                              resource[4], resource[16],
                                                                                              resource[17]))
+""""
+for source in sources:
+   connectionType = source[0]
+   connectionName = source[1]
+   QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
+   QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
+   QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
+   QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
+   QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
+   QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
+   QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+
+# Update GUI
+iface.reloadConnections()
+"""
