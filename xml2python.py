@@ -1,17 +1,18 @@
+from typing import List
 from xml.dom import minidom
 
 if (__name__) == "__main__":
     outputFile ="pycode4qgis.py"
     dataTypes = ["wms", "wfs", "xyz"]
-    outputFileContent = []
+    outputFileContent: List[str] = []
     outputFileContent.append('sources=[]')
 
     for dataType in dataTypes:
         xmldoc = minidom.parse('QGIS_%s.xml' % (dataType.upper()))
+        itemList = xmldoc.getElementsByTagName(dataType)
         if dataType == "xyz":
             itemList = xmldoc.getElementsByTagName(dataType+"tiles")
-        else:
-            itemList = xmldoc.getElementsByTagName(dataType)
+
         sourceList = []
 
         sourceAttributes = {
@@ -64,7 +65,6 @@ if (__name__) == "__main__":
     outputFileContent.append('    QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])')
     outputFileContent.append('    QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])')
     outputFileContent.append('    QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])')
-    outputFileContent.append(' ')
     outputFileContent.append('iface.reloadConnections()')
     with open(outputFile, 'w') as out_file:
         out_file.write('\n'.join(outputFileContent) + '\n')
