@@ -10,7 +10,7 @@ if (__name__) == "__main__":
     for dataType in dataTypes:
         xmldoc = minidom.parse('QGIS_%s.xml' % (dataType.upper()))
         itemList = xmldoc.getElementsByTagName(dataType)
-        if dataType == "xyz":
+        if dataType == "xyz": # Exception dont la resource est nommée dans QGIS_XYZ.xml
             itemList = xmldoc.getElementsByTagName(dataType+"tiles")
 
         sourceList = []
