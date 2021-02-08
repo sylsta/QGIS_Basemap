@@ -46,6 +46,7 @@ sources.append(["connections-wms", "FRANCE_IFREMER_SURVEILLANCE_LITTORALE", "", 
 sources.append(["connections-wms", "FRANCE_IGN_INSPIRE", "", "", "","http://wxs.ign.fr/inspire/r/wms?version=1.3.0", "", "", ""])
 sources.append(["connections-wms", "FRANCE_METROPOLE_GRAND_LYON", "", "", "","https://download.data.grandlyon.com/wms/rdata", "", "", ""])
 sources.append(["connections-wms", "FRANCE_METROPOLE_GRAND_POITIERS", "", "", "","https://sig.grandpoitiers.fr/arcgis/services/Geoportail/WMS_Preview/MapServer/WmsServer?", "", "", ""])
+sources.append(["connections-wms", "FRANCE_MNHN_ECOZONES", "", "", "","http://ws.carmencarto.fr/WMS/119/fxx_ref", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_GUADELOUPE", "", "", "","http://ws.carmencarto.fr/WMS/119/glp_grille?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_MARTINIQUE", "", "", "","http://ws.carmencarto.fr/WMS/119/mtq_grille?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_MAYOTTE", "", "", "","http://ws.carmencarto.fr/WMS/119/myt_grille?", "", "", ""])
@@ -56,6 +57,7 @@ sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_SAINT_GUYANE", "", "", ""
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_SAINT_PIERRE_ET_MIQUELON", "", "", "","http://ws.carmencarto.fr/WMS/119/spm_grille?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_TAAF_ILES_EPARSES", "", "", "","http://ws.carmencarto.fr/WMS/119/epa_grille?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_GRILLE_TAAF_ILES_SUBANTARCTIQUES", "", "", "","http://ws.carmencarto.fr/WMS/119/taaf_grille?", "", "", ""])
+sources.append(["connections-wms", "FRANCE_MNHN_INPN", "", "", "","http://ws.carmencarto.fr/WMS/119/fxx_inpn", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_REGIONS_BIOGEOGRAPHIQUES_METROPOLE", "", "", "","http://ws.carmencarto.fr/WMS/119/fxx_ref?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_ZONAGES_GUADELOUPE", "", "", "","http://ws.carmencarto.fr/WMS/119/glp_inpn?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_ZONAGES_GUYANE", "", "", "","http://ws.carmencarto.fr/WMS/119/guf_inpn?", "", "", ""])
@@ -135,6 +137,8 @@ sources.append(["connections-wms", "FRANCE_REGION_PIGMA_DRAC", "", "", "","https
 sources.append(["connections-wms", "FRANCE_REGION_PIGMA_RECTORAT", "", "", "","https://www.pigma.org/geoserver/rect/wms", "", "", ""])
 sources.append(["connections-wms", "FRANCE_REGION_PIGMA_RFF", "", "", "","https://www.pigma.org/geoserver/rff/wms", "", "", ""])
 sources.append(["connections-wms", "FRANCE_REGION_PPIGE_NPDC", "", "", "","https://www.ppige-npdc.fr/geoserver/ows", "", "", ""])
+sources.append(["connections-wms", "FRANCE_RESEAU_ZONES_HUMIDES", "", "", "","http://wms.reseau-zones-humides.org/cgi-bin/wmsfma", "", "", ""])
+sources.append(["connections-wms", "FRANCE_SANDRE", "", "", "","https://services.sandre.eaufrance.fr/geo/sandre", "", "", ""])
 sources.append(["connections-wms", "FRANCE_SANDRE_STATIONS_DE_MESURE", "", "", "","http://services.sandre.eaufrance.fr/geo/stations", "", "", ""])
 sources.append(["connections-wms", "FRANCE_SANDRE_ZONAGE", "", "", "","http://services.sandre.eaufrance.fr/geo/zonage", "", "", ""])
 sources.append(["connections-wms", "FRANCE_SHOM_INSPIRE", "", "", "","http://services.data.shom.fr/INSPIRE/wms/r", "", "", ""])
@@ -225,6 +229,7 @@ sources.append(["connections-wfs", "FRANCE_REGION_GEOPICARDIE_02_AISNE", "", "",
 sources.append(["connections-wfs", "FRANCE_REGION_GEOPICARDIE_60_OISE", "", "", "","http://www.geopicardie.fr/geoserver/dept60/ows", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_REGION_PIGMA", "", "", "","https://www.pigma.org/geoserver/wfs", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_REGION_PPIGE", "", "", "","https://www.ppige-npdc.fr/geoserver/ows?", "", "", ""])
+sources.append(["connections-wfs", "FRANCE_SANDRE", "", "", "","https://services.sandre.eaufrance.fr/geo/sandre", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_SANDRE_MASSES_D_EAU", "", "", "","http://services.sandre.eaufrance.fr/geo/mdo_FXX?VERSION=1.1.0", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_SANDRE_REFERENTIEL_HYDRO", "", "", "","http://services.sandre.eaufrance.fr/geo/eth_FXX?VERSION=1.1.0", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_SANDRE_STATIONS", "", "", "","http://services.sandre.eaufrance.fr/geo/stq_FXX?VERSION=1.1.0", "", "", ""])
@@ -261,14 +266,19 @@ sources.append(["connections-xyz", "Stamen Toner", "", "", "Map tiles by Stamen 
 sources.append(["connections-xyz", "Stamen Toner Light", "", "", "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL","http://tile.stamen.com/toner-lite/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "20", "0"])
 sources.append(["connections-xyz", "Stamen Watercolor", "", "", "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL","http://tile.stamen.com/watercolor/%7Bz%7D/%7Bx%7D/%7By%7D.jpg", "", "18", "0"])
 sources.append(["connections-xyz", "Wikimedia Hike Bike Map", "", "", "OpenStreetMap contributors, under ODbL","http://tiles.wmflabs.org/hikebike/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "17", "1"])
+
+# Add sources to browser
 for source in sources:
-    connectionType = source[0]
-    connectionName = source[1]
-    QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
-    QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
-    QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
-    QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
-    QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
-    QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
-    QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+   connectionType = source[0]
+   connectionName = source[1]
+   QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
+   QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
+   QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
+   QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
+   QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
+   QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
+   QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+
+# Update GUI
 iface.reloadConnections()
+
