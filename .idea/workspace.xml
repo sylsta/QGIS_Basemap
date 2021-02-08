@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d93b4eb-2348-4418-bf6d-4d4ac12497eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apache.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xml2python.py" beforeDir="false" afterPath="$PROJECT_DIR$/xml2python.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +103,7 @@
       <updated>1612460579503</updated>
       <workItem from="1612460593965" duration="4145000" />
       <workItem from="1612710024316" duration="1887000" />
+      <workItem from="1612721817097" duration="1166000" />
     </task>
     <servers />
   </component>
@@ -123,6 +120,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="543" y="268" key="#CLI_Interpreters" timestamp="1612712298918">
