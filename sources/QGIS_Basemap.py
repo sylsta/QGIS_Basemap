@@ -65,13 +65,13 @@ sources.append(["connections-wms","Bing VirtualEarth", "", "", "", "http://servi
 for source in sources:
    connectionType = source[0]
    connectionName = source[1]
-   QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
-   QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
-   QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
-   QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
-   QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
-   QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
-   QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+   QSettings().setValue("qgis_code/%s/%s/authcfg" % (connectionType, connectionName), source[2])
+   QSettings().setValue("qgis_code/%s/%s/password" % (connectionType, connectionName), source[3])
+   QSettings().setValue("qgis_code/%s/%s/referer" % (connectionType, connectionName), source[4])
+   QSettings().setValue("qgis_code/%s/%s/url" % (connectionType, connectionName), source[5])
+   QSettings().setValue("qgis_code/%s/%s/username" % (connectionType, connectionName), source[6])
+   QSettings().setValue("qgis_code/%s/%s/zmax" % (connectionType, connectionName), source[7])
+   QSettings().setValue("qgis_code/%s/%s/zmin" % (connectionType, connectionName), source[8])
 
 # Update GUI
 iface.reloadConnections()

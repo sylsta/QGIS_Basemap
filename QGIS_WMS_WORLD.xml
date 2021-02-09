@@ -1,0 +1,8 @@
+<!DOCTYPE connections>
+<qgsWMSConnections version="1.0">
+    <wms ignoreGetFeatureInfoURI="false" ignoreGetMapURI="false" invertAxisOrientation="false" dpiMode="7" ignoreAxisOrientation="false" referer="" password="" smoothPixmapTransform="false" username="" url="https://sedac.ciesin.columbia.edu/geoserver/wms" name="WORLD_NASA_Socioeconomic_Data_and_Applications_Center_(sedac)"/>
+    <wms ignoreAxisOrientation="false" dpiMode="7" url="https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?" ignoreGetMapURI="false" invertAxisOrientation="false" ignoreGetFeatureInfoURI="false" password="" smoothPixmapTransform="false" username="" referer="" name="WORLD_GEBCO_GLOBAL"/>
+    <wms ignoreAxisOrientation="false" dpiMode="7" url="https://www.gebco.net/data_and_products/gebco_web_services/north_polar_view_wms/mapserv?" ignoreGetMapURI="false" invertAxisOrientation="false" ignoreGetFeatureInfoURI="false" password="" smoothPixmapTransform="false" username="" referer="" name="WORLD_GEBCO_POLE_NORD"/>
+    <wms ignoreAxisOrientation="false" dpiMode="7" url="https://www.gebco.net/data_and_products/gebco_web_services/south_polar_view_wms/mapserv?" ignoreGetMapURI="false" invertAxisOrientation="false" ignoreGetFeatureInfoURI="false" password="" smoothPixmapTransform="false" username="" referer="" name="WORLD_GEBCO_POLE_SUD"/>
+    <wms ignoreAxisOrientation="false" dpiMode="7" url="http://neowms.sci.gsfc.nasa.gov/wms/wms?" ignoreGetMapURI="false" invertAxisOrientation="false" ignoreGetFeatureInfoURI="false" password="" smoothPixmapTransform="false" username="" referer="" name="MONDE_NASA"/>
+</qgsWMSConnections>
