@@ -1,4 +1,8 @@
+# new list of online Web Service sources
 sources=[]
+
+# append online Web Service sources
+# QGIS_WMS.xml
 sources.append(["connections-wms", "EUROPE_COPERNICUS", "", "", "","http://servicios.idee.es/wms/copernicus-landservice-spain?", "", "", ""])
 sources.append(["connections-wms", "EUROPE_ESPAGNE_IGN_MAPAS_ANTIGUOS_DE_MADRID", "", "", "","http://www.ign.es/wms/planos?", "", "", ""])
 sources.append(["connections-wms", "EUROPE_ESPAGNE_IGN_MINUTAS_CARTOGRAPHICAS", "", "", "","http://www.ign.es/wms/minutas-cartograficas?", "", "", ""])
@@ -43,7 +47,10 @@ sources.append(["connections-wms", "FRANCE_IFREMER_OCEANOGRAPHIE_PHYSIQUE", "", 
 sources.append(["connections-wms", "FRANCE_IFREMER_OGIVE_AGIL", "", "", "","http://www.ifremer.fr/services/wms/ogive_agil", "", "", ""])
 sources.append(["connections-wms", "FRANCE_IFREMER_PHOTOS_ANCIENNES", "", "", "","http://www.ifremer.fr/services/photos_anciennes", "", "", ""])
 sources.append(["connections-wms", "FRANCE_IFREMER_SURVEILLANCE_LITTORALE", "", "", "","http://www.ifremer.fr/services/wms/surveillance_littorale", "", "", ""])
-sources.append(["connections-wms", "FRANCE_IGN_INSPIRE", "", "", "","http://wxs.ign.fr/inspire/r/wms?version=1.3.0", "", "", ""])
+sources.append(["connections-wms", "FRANCE_IGN_CHOISIRGEOPORTAIL_RASTER_WMS", "", "", "","https://wxs.ign.fr/choisirgeoportail/geoportail/r/wms?VERSION=1.3.0", "", "", ""])
+sources.append(["connections-wms", "FRANCE_IGN_CHOISIRGEOPORTAIL_VECTEUR_WMS", "", "", "","https://wxs.ign.fr/choisirgeoportail/geoportail/v/wms?VERSION=1.3.0", "", "", ""])
+sources.append(["connections-wms", "FRANCE_IGN_CHOISIRGEOPORTAIL_WMTS", "", "", "","https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities", "", "", ""])
+sources.append(["connections-wms", "FRANCE_IGN_PRATIQUE_WMTS", "", "", "","https://wxs.ign.fr/pratique/geoportail/wmts?SERVICE=WMTS&REQUEST=GetCapabilities", "", "", ""])
 sources.append(["connections-wms", "FRANCE_METROPOLE_GRAND_LYON", "", "", "","https://download.data.grandlyon.com/wms/rdata", "", "", ""])
 sources.append(["connections-wms", "FRANCE_METROPOLE_GRAND_POITIERS", "", "", "","https://sig.grandpoitiers.fr/arcgis/services/Geoportail/WMS_Preview/MapServer/WmsServer?", "", "", ""])
 sources.append(["connections-wms", "FRANCE_MNHN_ECOZONES", "", "", "","http://ws.carmencarto.fr/WMS/119/fxx_ref", "", "", ""])
@@ -147,6 +154,7 @@ sources.append(["connections-wms", "MONDE_GEBCO_GLOBAL", "", "", "","https://www
 sources.append(["connections-wms", "MONDE_GEBCO_POLE_NORD", "", "", "","https://www.gebco.net/data_and_products/gebco_web_services/north_polar_view_wms/mapserv?", "", "", ""])
 sources.append(["connections-wms", "MONDE_GEBCO_POLE_SUD", "", "", "","https://www.gebco.net/data_and_products/gebco_web_services/south_polar_view_wms/mapserv?", "", "", ""])
 sources.append(["connections-wms", "MONDE_NASA", "", "", "","http://neowms.sci.gsfc.nasa.gov/wms/wms?", "", "", ""])
+# QGIS_WFS.xml
 sources.append(["connections-wfs", "FRANCE_BRGM_GEOLOGIE_HYDROGEOLOGIE_GRAVIMETRIE", "", "", "","http://geoservices.brgm.fr/geologie", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_BRGM_OBSERVATOIRE_DES_MATERIAUX_GRANULATS_MARINS", "", "", "","http://geoservices.brgm.fr/odmgm", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_BRGM_RISQUES_NATURELS_ET_INDUSTRIELS", "", "", "","http://geoservices.brgm.fr/risques", "", "", ""])
@@ -165,6 +173,7 @@ sources.append(["connections-wfs", "FRANCE_GISSOL", "", "", "","https://agroenvg
 sources.append(["connections-wfs", "FRANCE_IFREMER_BIOLOGIE", "", "", "","http://www.ifremer.fr/services/wfs/biologie", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_IFREMER_GRANULATS_MARINS", "", "", "","http://www.ifremer.fr/services/wfs/granulats_marins", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_IFREMER_SURVEILLANCE_LITTORALE", "", "", "","http://www.ifremer.fr/services/wfs/surveillance_littorale", "", "", ""])
+sources.append(["connections-wfs", "FRANCE_IGN_CHOISIRGEOPORTAIL_WFS", "", "", "","https://wxs.ign.fr/choisirgeoportail/geoportail/wfs?VERSION=2.0.0", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_METROPOLE_GRAND_LYON_grandlyon", "", "", "","https://download.data.grandlyon.com/wfs/grandlyon", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_METROPOLE_GRAND_LYON_rdata", "", "", "","https://download.data.grandlyon.com/wfs/rdata", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_MNHN_GRILLE_GUADELOUPE", "", "", "","http://ws.carmencarto.fr/WFS/119/glp_grille?", "", "", ""])
@@ -235,6 +244,7 @@ sources.append(["connections-wfs", "FRANCE_SANDRE_REFERENTIEL_HYDRO", "", "", ""
 sources.append(["connections-wfs", "FRANCE_SANDRE_STATIONS", "", "", "","http://services.sandre.eaufrance.fr/geo/stq_FXX?VERSION=1.1.0", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_SANDRE_ZONAGES", "", "", "","http://services.sandre.eaufrance.fr/geo/zon_FXX?VERSION=1.1.0", "", "", ""])
 sources.append(["connections-wfs", "FRANCE_SHOM", "", "", "","http://services.data.shom.fr/INSPIRE/wfs", "", "", ""])
+# QGIS_XYZ.xml
 sources.append(["connections-xyz", "Bing VirtualEarth", "", "", "","http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1", "", "19", "1"])
 sources.append(["connections-xyz", "CartoDb Dark Matter", "", "", "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.","http://basemaps.cartocdn.com/dark_all/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "20", "0"])
 sources.append(["connections-xyz", "CartoDb Positron", "", "", "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.","http://basemaps.cartocdn.com/light_all/%7Bz%7D/%7Bx%7D/%7By%7D.png", "", "20", "0"])
@@ -271,13 +281,13 @@ sources.append(["connections-xyz", "Wikimedia Hike Bike Map", "", "", "OpenStree
 for source in sources:
    connectionType = source[0]
    connectionName = source[1]
-   QSettings().setValue("qgis/%s/%s/authcfg" % (connectionType, connectionName), source[2])
-   QSettings().setValue("qgis/%s/%s/password" % (connectionType, connectionName), source[3])
-   QSettings().setValue("qgis/%s/%s/referer" % (connectionType, connectionName), source[4])
-   QSettings().setValue("qgis/%s/%s/url" % (connectionType, connectionName), source[5])
-   QSettings().setValue("qgis/%s/%s/username" % (connectionType, connectionName), source[6])
-   QSettings().setValue("qgis/%s/%s/zmax" % (connectionType, connectionName), source[7])
-   QSettings().setValue("qgis/%s/%s/zmin" % (connectionType, connectionName), source[8])
+   QSettings().setValue("qgis_code/%s/%s/authcfg" % (connectionType, connectionName), source[2])
+   QSettings().setValue("qgis_code/%s/%s/password" % (connectionType, connectionName), source[3])
+   QSettings().setValue("qgis_code/%s/%s/referer" % (connectionType, connectionName), source[4])
+   QSettings().setValue("qgis_code/%s/%s/url" % (connectionType, connectionName), source[5])
+   QSettings().setValue("qgis_code/%s/%s/username" % (connectionType, connectionName), source[6])
+   QSettings().setValue("qgis_code/%s/%s/zmax" % (connectionType, connectionName), source[7])
+   QSettings().setValue("qgis_code/%s/%s/zmin" % (connectionType, connectionName), source[8])
 
 # Update GUI
 iface.reloadConnections()
